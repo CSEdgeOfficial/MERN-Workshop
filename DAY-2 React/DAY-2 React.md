@@ -29,6 +29,28 @@ By the end of Day 2, you will:
     
 
 ---
+## 1️⃣ What is React?
+
+- React is a **JavaScript library** used to build **User Interfaces (UI)**
+    
+- Developed by **Facebook**
+    
+- Uses **component-based architecture**
+    
+- Makes **Single Page Applications (SPA)**
+    
+
+---
+
+## 2️⃣ What is a Component?
+
+- A component is a **reusable piece of UI**
+    
+- Written as a **JavaScript function**
+    
+- Components return **JSX**
+
+---
 
 ## 1. Understanding Components 
 
@@ -361,3 +383,17 @@ src/
 ```
 
  Keeps code **clean and organized**.
+
+
+---
+
+## 🧠 ONE-LINE EXAM ANSWERS
+
+| Question          | Answer                            |
+| ----------------- | --------------------------------- |
+| What is JSX?      | JSX allows HTML inside JavaScript |
+| What is state?    | State stores dynamic data         |
+| What is props?    | Props pass data to components     |
+| useEffect use?    | Runs side effects                 |
+| React Router use? | Page navigation                   |
+| useContext use?   | Global state sharing              |

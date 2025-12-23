@@ -58,6 +58,10 @@ By the end of Day 2, you will:
 
 A **component** is a reusable piece of UI.
 
+```shell
+npm create vite@latest .
+```
+
 ### Simple Component
 
 ```jsx

@@ -44,4 +44,4 @@
 
 cmd ->
 open terminal as administrater ->
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser

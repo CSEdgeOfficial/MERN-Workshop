@@ -42,6 +42,6 @@
 ---
 
 
-cmd 
-open terminal as administrater
+cmd ->
+open terminal as administrater ->
 Set-ExecutionPolicy RemoteSigned

@@ -41,3 +41,7 @@
 
 ---
 
+
+cmd 
+open terminal as administrater
+Set-ExecutionPolicy RemoteSigned

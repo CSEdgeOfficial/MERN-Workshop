@@ -57,3 +57,57 @@ function App() {
 
 export default App;
 ```
+
+### User.jsx
+
+```jsx
+import { useEffect, useState } from "react";
+
+  
+
+function Users() {
+
+const [users, setUsers] = useState([]);
+
+useEffect(() => {
+
+	fetch("https://jsonplaceholder.typicode.com/users")
+	
+	.then((res) => res.json())
+	
+	.then((data) => setUsers(data));
+
+}, []);
+
+return (
+
+	<div>
+	
+		{users.map((user, index) => {
+		
+			return (
+			
+				<div key={index}>
+				
+					<h1>
+					
+						{user.id},{user.name},{user.address.street}
+					
+					</h1>
+				
+				</div>
+			
+			);
+		
+		})}
+	
+	</div>
+
+);
+
+}
+
+  
+
+export default Users;
+```

@@ -85,7 +85,11 @@ return (
 	
 		{users.map((user, index) => {
 		
-			return (
+			return (<h1>
+				
+				{user.id},{user.name},{user.address.street}
+				
+				</h1>
 			
 				<div key={index}>
 				

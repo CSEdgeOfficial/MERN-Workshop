@@ -26,6 +26,18 @@ app.post("/", async (req, res) => {
   });
 });
 
+  
+
+app.get("/users/:id", async(req, res) => {
+
+	const id = req.params.id
+	
+	const data = await User.findById(id)
+	
+	return res.json(data)
+
+});
+
 app.put("/", (req, res) => {});
 
 app.delete("/", (req, res) => {});

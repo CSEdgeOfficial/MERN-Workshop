@@ -1,0 +1,42 @@
+
+server.js
+
+import mongoose from "mongoose";
+import express from "express";
+import User from "./models/user.js";
+
+const app = express();
+
+app.listen('5000', ()=> { 
+  console.log('server is running')
+})
+
+mongoose.connect("mongodb://localhost:27017/Mern")
+.then(() => console.log("MongoDB connected"))
+.catch(err => console.log(err));
+
+app.post("/users", async (req, res) => {
+  const user = new User(req.body);
+  await user.save();
+  res.send(user);
+});
+
+import mongoose from "mongoose";
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  age: Number
+});
+
+-----------
+User.js
+
+
+import mongoose from "mongoose";
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  age: Number
+});
+
+export default mongoose.model("User", userSchema);

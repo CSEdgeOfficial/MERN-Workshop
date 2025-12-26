@@ -18,11 +18,15 @@ app.get("/", async (req, res) => {
   res.json(users);
 });
 
-app.post("/", async (req, res) => {
-  const userDetails = req.body;
-  const createdUser = await User.create(userDetails);
-  res.json({
+app.post("/users", async (req, res) => {
+  var { name, email, password } = req.body;
+  password = await bcrypt.hash(password, 10);
+  const createdUser = await User.create({
+    name, email, password,
+  });
+  return res.json({
     message: "user has been created",
+    id: createdUser.id,
   });
 });
 
